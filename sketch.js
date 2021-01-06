@@ -42,6 +42,11 @@ function setup() {
 
 function draw() {  
   background(46, 139, 87);
+  
+  fedTime=database.ref('LastFed'); 
+  fedTime.on("value",function(data){ 
+    lastFed=data.val(); 
+  });
 
   if(lastFed>=12){
     text("Last Fed (approx timing) : "+ lastFed%12 + " PM", 350,30);
