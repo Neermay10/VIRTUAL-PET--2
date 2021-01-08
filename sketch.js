@@ -43,7 +43,7 @@ function setup() {
 function draw() {  
   background(46, 139, 87);
   
-  fedTime=database.ref('LastFed'); 
+  fedTime=database.ref('lastFed'); 
   fedTime.on("value",function(data){ 
     lastFed=data.val(); 
   });
